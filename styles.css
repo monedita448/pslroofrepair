@@ -1,0 +1,417 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #1b2a4a;
+    --charcoal: #2d2d2d;
+    --accent: #e8520e;
+    --accent-hover: #cc4509;
+    --white: #ffffff;
+    --off-white: #f5f5f5;
+    --gray: #6b7280;
+    --light-gray: #e5e7eb;
+    --radius: 8px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: var(--charcoal);
+    line-height: 1.6;
+    background: var(--white);
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ── Header ───────────────────────────────────── */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--navy);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 42px;
+}
+
+.logo svg {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+.header-phone {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.header-phone:hover {
+    text-decoration: underline;
+}
+
+/* ── Hero ─────────────────────────────────────── */
+
+.hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #0f1b33 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.hero-sub {
+    font-size: 1.1rem;
+    color: #c5cfe0;
+    max-width: 600px;
+    margin: 0 auto 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+}
+
+/* ── Buttons ──────────────────────────────────── */
+
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Section Shared ───────────────────────────── */
+
+.section-title {
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 36px;
+    color: var(--navy);
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* ── Services ─────────────────────────────────── */
+
+.services {
+    background: var(--off-white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.service-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s;
+}
+
+.service-card:hover {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+.service-icon {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+}
+
+.service-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--navy);
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: var(--gray);
+}
+
+/* ── Why Choose Us ────────────────────────────── */
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.trust-badge {
+    background: var(--white);
+    border: 1px solid var(--light-gray);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    text-align: center;
+}
+
+.trust-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.trust-badge h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: var(--navy);
+}
+
+.trust-badge p {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.license-number {
+    display: none;
+}
+
+/* ── Contact Form ─────────────────────────────── */
+
+.contact {
+    background: var(--off-white);
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--navy);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 14px 16px;
+    font-size: 16px;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--radius);
+    font-family: inherit;
+    background: var(--white);
+    min-height: 48px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid var(--accent);
+    border-color: var(--accent);
+}
+
+.contact-form .btn {
+    width: 100%;
+    font-size: 1.05rem;
+}
+
+.form-success {
+    text-align: center;
+    max-width: 700px;
+    margin: 24px auto 0;
+    padding: 20px;
+    background: #ecfdf5;
+    color: #065f46;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 1.05rem;
+}
+
+/* ── Footer ───────────────────────────────────── */
+
+.site-footer {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.footer-phone {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+    margin-bottom: 10px;
+    min-height: 44px;
+}
+
+.footer-phone:hover {
+    text-decoration: underline;
+}
+
+.footer-area {
+    font-size: 0.95rem;
+    color: #c5cfe0;
+    margin-bottom: 8px;
+}
+
+.footer-copy {
+    font-size: 0.8rem;
+    color: #8899b3;
+}
+
+/* ── Responsive: 600px+ ───────────────────────── */
+
+@media (min-width: 600px) {
+    .logo {
+        height: 46px;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-form .btn {
+        width: auto;
+    }
+}
+
+/* ── Responsive: 900px+ ───────────────────────── */
+
+@media (min-width: 900px) {
+    .logo {
+        height: 50px;
+    }
+
+    .hero {
+        padding: 100px 20px 80px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
