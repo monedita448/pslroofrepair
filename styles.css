@@ -86,6 +86,93 @@ body {
     text-decoration: underline;
 }
 
+/* ── Nav ──────────────────────────────────────── */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.services-dropdown {
+    position: relative;
+}
+
+.services-dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    min-width: 220px;
+    z-index: 200;
+    padding: 8px 0;
+    margin-top: 8px;
+}
+
+.services-dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--charcoal);
+    text-decoration: none;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.services-dropdown-menu a:hover {
+    background: var(--off-white);
+    color: var(--accent);
+}
+
+.services-dropdown.open .services-dropdown-menu {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .services-dropdown-menu {
+        display: block;
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        min-width: auto;
+        padding: 0;
+        margin-top: 0;
+        display: flex;
+        gap: 4px;
+    }
+
+    .services-dropdown-menu a {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        color: #c5cfe0;
+        border-radius: var(--radius);
+    }
+
+    .services-dropdown-menu a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: var(--white);
+    }
+}
+
 /* ── Hero ─────────────────────────────────────── */
 
 .hero {
@@ -165,6 +252,69 @@ section {
     padding: 60px 0;
 }
 
+/* ── Service Page Content ─────────────────────── */
+
+.service-content {
+    background: var(--white);
+}
+
+.service-content .container {
+    max-width: 760px;
+}
+
+.service-content h2 {
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 20px;
+}
+
+.service-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+}
+
+.service-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* ── CTA Banner ───────────────────────────────── */
+
+.cta-banner {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta-banner h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.cta-banner p {
+    color: #c5cfe0;
+    margin-bottom: 24px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
 /* ── Services ─────────────────────────────────── */
 
 .services {
@@ -183,11 +333,16 @@ section {
     padding: 28px 24px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, transform 0.15s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
 }
 
 .service-icon {

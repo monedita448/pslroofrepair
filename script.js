@@ -44,6 +44,22 @@
         });
     }
 
+    // Mobile nav toggle
+    var navToggle = document.querySelector(".nav-toggle");
+    var navDropdown = document.getElementById("servicesNav");
+    if (navToggle && navDropdown) {
+        navToggle.addEventListener("click", function () {
+            var isOpen = navDropdown.classList.toggle("open");
+            navToggle.setAttribute("aria-expanded", isOpen);
+        });
+        document.addEventListener("click", function (e) {
+            if (!navDropdown.contains(e.target)) {
+                navDropdown.classList.remove("open");
+                navToggle.setAttribute("aria-expanded", "false");
+            }
+        });
+    }
+
     // FAQ accordion: close other items when one opens
     var faqItems = document.querySelectorAll(".faq-item");
     for (var i = 0; i < faqItems.length; i++) {
