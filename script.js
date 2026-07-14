@@ -43,4 +43,18 @@
             success.hidden = false;
         });
     }
+
+    // FAQ accordion: close other items when one opens
+    var faqItems = document.querySelectorAll(".faq-item");
+    for (var i = 0; i < faqItems.length; i++) {
+        faqItems[i].addEventListener("toggle", function () {
+            if (this.open) {
+                for (var j = 0; j < faqItems.length; j++) {
+                    if (faqItems[j] !== this) {
+                        faqItems[j].removeAttribute("open");
+                    }
+                }
+            }
+        });
+    }
 })();
