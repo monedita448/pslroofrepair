@@ -196,7 +196,15 @@
 
 <!-- Hero -->
 <section class="hero-navy">
-  <div class="container">
+  <div class="hero-image-wrap">
+    <picture>
+      <source srcset="assets/images/hero/hero-roofer-shingles-640.webp 640w, assets/images/hero/hero-roofer-shingles-1024.webp 1024w, assets/images/hero/hero-roofer-shingles-1600.webp 1600w" type="image/webp">
+      <source srcset="assets/images/hero/hero-roofer-shingles-1600.jpg 1600w" type="image/jpeg">
+      <img src="assets/images/hero/hero-roofer-shingles-1600.jpg" alt="Professional roofer installing architectural shingles on a residential roof" width="1600" height="1067" fetchpriority="high" class="hero-img" loading="eager">
+    </picture>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="container hero-content">
     <span class="eyebrow">Port St. Lucie Roofing</span>
     <h1>Port St. Lucie's Trusted Roof Repair Experts</h1>
     <p class="lede mx-auto">Fast response. Licensed &amp; insured professionals. Free estimates on every job.</p>
@@ -238,6 +246,34 @@
     <div class="trust-item"><svg class="icon" width="18" height="18"><use href="#i-check"/></svg> Free Estimates</div>
   </div>
 </div>
+
+<!-- Project gallery -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="center" style="max-width:620px;margin:0 auto 40px;">
+      <span class="eyebrow">Our Work</span>
+      <h2>Quality Roofing Across Port St. Lucie</h2>
+    </div>
+    <div class="gallery-grid">
+      <figure class="gallery-item">
+        <picture>
+          <source srcset="assets/images/gallery/florida-completed-project-1-480.webp 480w, assets/images/gallery/florida-completed-project-1-800.webp 800w" type="image/webp">
+          <source srcset="assets/images/gallery/florida-completed-project-1-800.jpg 800w" type="image/jpeg">
+          <img src="assets/images/gallery/florida-completed-project-1-800.jpg" alt="Completed roofing project under clear Florida skies" width="800" height="450" loading="lazy">
+        </picture>
+        <figcaption>Completed roofing project under clear Florida skies</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <picture>
+          <source srcset="assets/images/gallery/florida-completed-project-2-480.webp 480w, assets/images/gallery/florida-completed-project-2-800.webp 800w" type="image/webp">
+          <source srcset="assets/images/gallery/florida-completed-project-2-800.jpg 800w" type="image/jpeg">
+          <img src="assets/images/gallery/florida-completed-project-2-800.jpg" alt="Newly installed residential roof in a Florida neighborhood" width="800" height="450" loading="lazy">
+        </picture>
+        <figcaption>Newly installed residential roof in a Florida neighborhood</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
 <!-- Services -->
 <section class="section section-alt" id="services">

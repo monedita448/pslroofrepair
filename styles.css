@@ -136,8 +136,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .dropdown-menu a:hover { background: var(--surface-alt); }
 
 /* ---------- Hero ---------- */
-.hero-navy { background: var(--charcoal); padding: 40px 0 44px; position: relative; }
-.hero-navy .container { text-align: center; }
+.hero-navy { background: var(--charcoal); position: relative; overflow: hidden; }
+.hero-image-wrap {
+  position: absolute; inset: 0; z-index: 0;
+}
+.hero-img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
+}
+.hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(21,24,28,0.55) 0%, rgba(21,24,28,0.82) 60%, rgba(21,24,28,0.95) 100%);
+}
+.hero-content { position: relative; z-index: 1; padding: 80px 0 44px; text-align: center; }
 .hero-navy .eyebrow { color: #B0B3B8; }
 .hero-navy h1 { color: #fff; max-width: 760px; margin: 0 auto 14px; }
 .hero-navy p.lede { color: #B0B3B8; margin: 0 auto; }
@@ -191,6 +201,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .service-card .icon-tile { background: var(--charcoal); color: #fff; width: 48px; height: 48px; }
 .service-card .tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red-dark); }
 .service-card h3 { color: var(--ink); }
+
+/* ---------- Gallery ---------- */
+.gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.gallery-item {
+  border-radius: var(--radius-md); overflow: hidden; position: relative;
+  border: 1px solid var(--border); background: var(--surface);
+}
+.gallery-item img { width: 100%; height: auto; display: block; aspect-ratio: 16/9; object-fit: cover; }
+.gallery-item figcaption {
+  padding: 14px 18px; font-size: 0.88rem; font-weight: 600; color: var(--ink-soft);
+}
 
 /* ---------- FAQ Accordion ---------- */
 .faq-item { border-bottom: 1px solid var(--border); }
@@ -271,9 +292,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .nav-links, .nav-cta { display: none; }
   .nav-toggle { display: inline-flex; }
   .grid-2, .grid-3, .grid-4, .footer-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .utility-bar .u-right { display: none; }
   .section { padding: 44px 0; }
+  .hero-content { padding: 60px 0 36px; }
   .sticky-cta-bar { display: flex; }
   body.has-sticky-cta { padding-bottom: 76px; }
   .hero-navy .cta-row .btn { width: 100%; }
