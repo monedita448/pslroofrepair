@@ -136,18 +136,21 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .dropdown-menu a:hover { background: var(--surface-alt); }
 
 /* ---------- Hero ---------- */
-.hero-navy { background: var(--charcoal); position: relative; overflow: hidden; }
+.hero-navy { background: var(--charcoal); }
 .hero-image-wrap {
-  position: absolute; inset: 0; z-index: 0;
+  position: relative; height: 520px; overflow: hidden;
 }
 .hero-img {
   width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
 }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(21,24,28,0.55) 0%, rgba(21,24,28,0.82) 60%, rgba(21,24,28,0.95) 100%);
+  background: linear-gradient(180deg, rgba(21,24,28,0.78) 0%, rgba(21,24,28,0.90) 50%, rgba(21,24,28,0.96) 100%);
 }
-.hero-content { position: relative; z-index: 1; padding: 80px 0 44px; text-align: center; }
+.hero-content {
+  position: absolute; top: 0; left: 0; right: 0;
+  z-index: 1; padding: 80px 24px 44px; text-align: center;
+}
 .hero-navy .eyebrow { color: #B0B3B8; }
 .hero-navy h1 { color: #fff; max-width: 760px; margin: 0 auto 14px; }
 .hero-navy p.lede { color: #B0B3B8; margin: 0 auto; }
@@ -296,7 +299,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .form-row { grid-template-columns: 1fr; }
   .utility-bar .u-right { display: none; }
   .section { padding: 44px 0; }
-  .hero-content { padding: 60px 0 36px; }
+  .hero-image-wrap { height: 400px; }
+  .hero-content { padding: 60px 20px 36px; }
   .sticky-cta-bar { display: flex; }
   body.has-sticky-cta { padding-bottom: 76px; }
   .hero-navy .cta-row .btn { width: 100%; }
