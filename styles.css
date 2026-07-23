@@ -1,23 +1,23 @@
 /* =========================================================
    PSL ROOF REPAIR — UNIFIED DESIGN SYSTEM
-   Dark theme ported from UAT. Orange = CTA-only accent.
-   Plus Jakarta Sans. WCAG AA verified.
+   Charcoal dark theme. Red = CTA-only accent (WCAG AA verified).
+   Plus Jakarta Sans.
    ========================================================= */
 
 :root {
-  --navy: #0B2A4A;
-  --navy-dark: #050B16;
-  --navy-soft: #1B3A66;
-  --orange: #E8871E;
-  --orange-dark: #CB7210;
-  --on-orange: #402400;
+  --charcoal: #2A2E33;
+  --charcoal-dark: #15181C;
+  --charcoal-soft: #3A3F45;
+  --red: #D62828;
+  --red-dark: #B71C1C;
+  --on-red: #FFFFFF;
 
-  --bg: #081226;
-  --surface: #101F3D;
-  --surface-alt: #0C1A33;
-  --ink: #F5F7FA;
-  --ink-soft: #B6C2D6;
-  --ink-faint: #93A1B8;
+  --bg: #1A1D21;
+  --surface: #24282D;
+  --surface-alt: #1E2126;
+  --ink: #F0F1F3;
+  --ink-soft: #B0B3B8;
+  --ink-faint: #8A8E94;
   --border: rgba(255, 255, 255, 0.1);
   --success: #2ECC71;
 
@@ -54,7 +54,7 @@ h1, h2, h3, h4 { line-height: 1.15; font-weight: 700; }
 .section-alt { background: var(--surface-alt); }
 .eyebrow {
   display: inline-block; font-size: 0.76rem; font-weight: 700; letter-spacing: 0.12em;
-  text-transform: uppercase; color: var(--orange-dark); margin-bottom: 12px;
+  text-transform: uppercase; color: var(--red-dark); margin-bottom: 12px;
 }
 h1 { font-size: clamp(2rem, 4.2vw, 3.1rem); }
 h2 { font-size: clamp(1.6rem, 2.8vw, 2.2rem); margin-bottom: 14px; color: var(--ink); }
@@ -75,13 +75,13 @@ p { color: var(--ink-soft); }
 }
 
 .skip-link {
-  position: absolute; left: -999px; top: 0; background: var(--navy); color: #fff;
+  position: absolute; left: -999px; top: 0; background: var(--charcoal); color: #fff;
   padding: 10px 16px; border-radius: 0 0 8px 0; z-index: 200; font-weight: 600;
 }
 .skip-link:focus { left: 0; }
 
 a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-  outline: 2.5px solid var(--orange); outline-offset: 2px; border-radius: 4px;
+  outline: 2.5px solid var(--red); outline-offset: 2px; border-radius: 4px;
 }
 
 /* ---------- Buttons ---------- */
@@ -92,17 +92,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   white-space: nowrap;
 }
 .btn:active { transform: scale(0.97); }
-.btn-primary { background: var(--orange); color: var(--on-orange); box-shadow: var(--shadow-soft); }
-.btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: var(--shadow-lift); }
-.btn-navy { background: var(--navy); color: #fff; }
-.btn-navy:hover { background: var(--navy-soft); transform: translateY(-2px); }
+.btn-primary { background: var(--red); color: var(--on-red); box-shadow: var(--shadow-soft); }
+.btn-primary:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+.btn-navy { background: var(--charcoal); color: #fff; }
+.btn-navy:hover { background: var(--charcoal-soft); transform: translateY(-2px); }
 .btn-outline { border: 1.5px solid var(--border); color: var(--ink); }
-.btn-outline:hover { border-color: var(--navy-soft); background: var(--surface-alt); }
+.btn-outline:hover { border-color: var(--charcoal-soft); background: var(--surface-alt); }
 .btn-lg { padding: 16px 30px; font-size: 1.02rem; }
 .btn-block { width: 100%; }
 
 /* ---------- Utility bar ---------- */
-.utility-bar { background: var(--navy-dark); color: #CBD8E6; font-size: 0.8rem; padding: 8px 0; }
+.utility-bar { background: var(--charcoal-dark); color: #B0B3B8; font-size: 0.8rem; padding: 8px 0; }
 .utility-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
 .utility-bar a { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #fff; }
 .utility-bar .u-left, .utility-bar .u-right { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
@@ -111,7 +111,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* ---------- Header / Nav ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(8, 18, 38, 0.9); border-bottom: 1px solid var(--border);
+  background: rgba(26, 29, 33, 0.9); border-bottom: 1px solid var(--border);
   backdrop-filter: blur(6px);
 }
 .nav-row { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; }
@@ -136,11 +136,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .dropdown-menu a:hover { background: var(--surface-alt); }
 
 /* ---------- Hero ---------- */
-.hero-navy { background: var(--navy); padding: 40px 0 44px; position: relative; }
+.hero-navy { background: var(--charcoal); padding: 40px 0 44px; position: relative; }
 .hero-navy .container { text-align: center; }
-.hero-navy .eyebrow { color: #9FC1E8; }
+.hero-navy .eyebrow { color: #B0B3B8; }
 .hero-navy h1 { color: #fff; max-width: 760px; margin: 0 auto 14px; }
-.hero-navy p.lede { color: #B9CBDF; margin: 0 auto; }
+.hero-navy p.lede { color: #B0B3B8; margin: 0 auto; }
 .hero-navy .cta-row { display: flex; justify-content: center; gap: 12px; margin-top: 26px; flex-wrap: wrap; }
 
 .overlap-card {
@@ -157,10 +157,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   border: 1.5px solid var(--border); background: var(--bg); color: var(--ink);
   font: inherit; font-size: 0.95rem; transition: border-color 0.2s;
 }
-.callback-form input:focus { outline: none; border-color: var(--orange); }
+.callback-form input:focus { outline: none; border-color: var(--red); }
 .callback-form.has-error input[required] { border-color: #F0644F; }
 .callback-note { font-size: 0.8rem; color: var(--ink-faint); margin-top: 10px; }
-.callback-note a { color: var(--orange); text-decoration: underline; }
+.callback-note a { color: var(--red); text-decoration: underline; }
 
 /* ---------- Trust strip ---------- */
 .trust-strip { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 22px 0; }
@@ -188,8 +188,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   transition: transform 0.18s var(--ease), box-shadow 0.18s var(--ease);
 }
 .service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
-.service-card .icon-tile { background: var(--navy); color: #fff; width: 48px; height: 48px; }
-.service-card .tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange-dark); }
+.service-card .icon-tile { background: var(--charcoal); color: #fff; width: 48px; height: 48px; }
+.service-card .tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--red-dark); }
 .service-card h3 { color: var(--ink); }
 
 /* ---------- FAQ Accordion ---------- */
@@ -222,7 +222,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 .form-group input:focus,
 .form-group select:focus,
-.form-group textarea:focus { outline: none; border-color: var(--orange); }
+.form-group textarea:focus { outline: none; border-color: var(--red); }
 .contact-form .btn { width: 100%; font-size: 1.05rem; }
 .form-success {
   text-align: center; max-width: 700px; margin: 24px auto 0; padding: 20px;
@@ -232,14 +232,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* ---------- CTA banner ---------- */
 .cta-banner {
-  background: var(--navy); border-radius: var(--radius-lg); padding: 48px 32px; text-align: center;
+  background: var(--charcoal); border-radius: var(--radius-lg); padding: 48px 32px; text-align: center;
 }
 .cta-banner h2 { color: #fff; margin-bottom: 10px; }
-.cta-banner p { color: #B9CBDF; margin-bottom: 22px; max-width: 500px; margin-left: auto; margin-right: auto; }
+.cta-banner p { color: #B0B3B8; margin-bottom: 22px; max-width: 500px; margin-left: auto; margin-right: auto; }
 .cta-buttons { display: flex; flex-direction: column; gap: 12px; align-items: center; }
 
 /* ---------- Footer ---------- */
-.site-footer { background: var(--navy-dark); color: #B9C8D9; padding: 52px 0 22px; margin-top: 56px; }
+.site-footer { background: var(--charcoal-dark); color: #B0B3B8; padding: 52px 0 22px; margin-top: 56px; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 30px; padding-bottom: 32px; border-bottom: 1px solid rgba(255,255,255,0.12); }
 .footer-grid .footer-heading { color: #fff; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; }
 .footer-grid ul li { margin-bottom: 9px; font-size: 0.88rem; }
