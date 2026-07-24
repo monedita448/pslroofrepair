@@ -159,7 +159,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .overlap-card {
   max-width: 572px; background: var(--surface); border-radius: var(--radius-lg);
   border: 1px solid var(--border); box-shadow: var(--shadow-lift); padding: 26px;
-  position: absolute; bottom: -50px; left: 50%; transform: translateX(-50%);
+  position: absolute; top: 330px; left: 50%; transform: translateX(-50%);
   width: calc(100% - 48px); z-index: 2;
 }
 .or-divider { display: flex; align-items: center; gap: 12px; margin: 16px 0; color: var(--ink-faint); font-size: 0.82rem; font-weight: 600; }
@@ -178,7 +178,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .callback-note a { color: var(--red); text-decoration: underline; }
 
 /* ---------- Trust strip ---------- */
-.trust-strip { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 22px 0; margin-top: 70px; }
+.trust-strip { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 22px 0; margin-top: 135px; }
 .trust-row { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
 .trust-item { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.88rem; color: var(--ink-soft); }
 
