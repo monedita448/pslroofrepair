@@ -136,7 +136,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .dropdown-menu a:hover { background: var(--surface-alt); }
 
 /* ---------- Hero ---------- */
-.hero-navy { background: var(--charcoal); }
+.hero-navy { background: var(--charcoal); position: relative; }
 .hero-image-wrap {
   position: relative; height: 520px; overflow: hidden;
 }
@@ -144,8 +144,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   width: 100%; height: 100%; object-fit: cover; object-position: center 30%;
 }
 .hero-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(21,24,28,0.78) 0%, rgba(21,24,28,0.90) 50%, rgba(21,24,28,0.96) 100%);
+  position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(180deg, rgba(21,24,28,0.55) 0%, rgba(21,24,28,0.82) 60%, rgba(21,24,28,0.95) 100%);
 }
 .hero-content {
   position: absolute; top: 0; left: 0; right: 0;
